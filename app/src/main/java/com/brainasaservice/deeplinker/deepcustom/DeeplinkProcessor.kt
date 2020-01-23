@@ -14,9 +14,5 @@ class DeeplinkProcessor (private val context: Context) {
 
         Activity2.start(context, user)
     }
-
-    companion object {
-        const val EXTRA_KEY = "deeplink_processor_extra"
-    }
 }
 

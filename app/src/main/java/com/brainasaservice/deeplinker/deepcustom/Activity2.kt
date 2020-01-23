@@ -11,11 +11,13 @@ import kotlinx.android.synthetic.main.activity_deep_custom.*
 class Activity2 : AppCompatActivity() {
 
     companion object {
+        const val EXTRA_KEY = "deeplink_processor_extra"
+
         @JvmStatic
         fun start(context: Context, user: User) {
             val intent = Intent(context, Activity2::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
-            intent.putExtra(DeeplinkProcessor.EXTRA_KEY, user)
+            intent.putExtra(EXTRA_KEY, user)
             context.startActivity(intent)
         }
     }
@@ -25,7 +27,7 @@ class Activity2 : AppCompatActivity() {
         println("onCreate(${javaClass.simpleName})")
         setContentView(R.layout.activity_deep_custom)
 
-        intent.extras?.getParcelable<User>(DeeplinkProcessor.EXTRA_KEY)
+        intent.extras?.getParcelable<User>(EXTRA_KEY)
             ?.let { user ->
                 textTitle.text = "Hello, ${user.name}!"
             }

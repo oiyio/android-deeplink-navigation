@@ -30,7 +30,7 @@
 
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-                <!-- Accepts URIs that begin with "example://gizmos” -->
+                <!-- Accepts URIs that begin with "deep://custom” -->
                 <data android:scheme="deep" />
             </intent-filter>
         </activity>
