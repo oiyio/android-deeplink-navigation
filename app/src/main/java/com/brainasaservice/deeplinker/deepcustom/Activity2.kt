@@ -1,16 +1,22 @@
-package com.brainasaservice.deeplinker.deepcontent
+package com.brainasaservice.deeplinker.deepcustom
 
 import android.os.Bundle
 import android.support.v4.app.NavUtils
 import android.support.v7.app.AppCompatActivity
 import com.brainasaservice.deeplinker.R
-import kotlinx.android.synthetic.main.activity_deep_content.*
+import com.brainasaservice.deeplinkprocessor.DeeplinkProcessor
+import kotlinx.android.synthetic.main.activity_deep_custom.*
 
-class DeepContentActivity : AppCompatActivity() {
+class Activity2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         println("onCreate(${javaClass.simpleName})")
-        setContentView(R.layout.activity_deep_content)
+        setContentView(R.layout.activity_deep_custom)
+
+        intent.extras?.getParcelable<User>(DeeplinkProcessor.EXTRA_KEY)
+            ?.let { user ->
+                textTitle.text = "Hello, ${user.name}!"
+            }
 
         buttonBack.setOnClickListener {
             NavUtils.getParentActivityIntent(this)?.let { intent ->

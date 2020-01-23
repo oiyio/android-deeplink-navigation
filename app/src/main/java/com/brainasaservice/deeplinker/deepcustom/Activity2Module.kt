@@ -6,10 +6,10 @@ import dagger.Module
 import dagger.multibindings.IntoSet
 
 @Module
-interface DeepCustomModule {
+interface Activity2Module {
     @Binds
     @IntoSet
     fun bindsDeepContentDeeplinkProcessorIntoSet(
-        processor: DeepCustomDeeplinkProcessor
+        processor: Activity2DeeplinkProcessor
     ): DeeplinkProcessor
 }

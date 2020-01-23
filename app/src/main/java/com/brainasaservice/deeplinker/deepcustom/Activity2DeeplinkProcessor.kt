@@ -8,7 +8,7 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 @Singleton
-class DeepCustomDeeplinkProcessor @Inject constructor(
+class Activity2DeeplinkProcessor @Inject constructor(
     private val context: Context
 ) : DeeplinkProcessor {
 
@@ -18,11 +18,11 @@ class DeepCustomDeeplinkProcessor @Inject constructor(
 
     override fun execute(deeplink: String) {
         val name = deeplink.removePrefix("deep://deep/custom/").split('/').getOrNull(0) ?: "Unknown"
-        val model = CustomDeeplinkModel(name)
+        val user = User(name)
 
-        context.startActivity(Intent(context, DeepCustomActivity::class.java).apply {
+        context.startActivity(Intent(context, Activity2::class.java).apply {
             this.flags = FLAG_ACTIVITY_NEW_TASK
-            putExtra(DeeplinkProcessor.EXTRA_KEY, model)
+            putExtra(DeeplinkProcessor.EXTRA_KEY, user)
         })
     }
 }

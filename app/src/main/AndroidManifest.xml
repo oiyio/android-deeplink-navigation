@@ -21,11 +21,11 @@
         </activity>
 
         <activity
-            android:name=".deepcontent.DeepContentActivity"
+            android:name=".deepcontent.Activity1"
             android:label="Deep Content"
             android:parentActivityName=".main.MainActivity" />
         <activity
-            android:name=".deepcustom.DeepCustomActivity"
+            android:name=".deepcustom.Activity2"
             android:label="Deep Custom"
             android:parentActivityName=".main.MainActivity" />
 
