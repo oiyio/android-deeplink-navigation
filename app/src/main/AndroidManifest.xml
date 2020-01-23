@@ -22,11 +22,11 @@
 
         <activity
             android:name=".deepcontent.Activity1"
-            android:label="Deep Content"
+            android:label="Activity 1"
             android:parentActivityName=".main.MainActivity" />
         <activity
             android:name=".deepcustom.Activity2"
-            android:label="Deep Custom"
+            android:label="Activity 2"
             android:parentActivityName=".main.MainActivity" />
 
         <activity android:name=".deeplink.MyDeeplinkActivity">

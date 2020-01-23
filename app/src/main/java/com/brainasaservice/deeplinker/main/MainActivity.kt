@@ -14,13 +14,13 @@ class MainActivity : AppCompatActivity() {
         println("onCreate(${javaClass.simpleName})")
         setContentView(R.layout.activity_main)
 
-        deepButton.setOnClickListener {
+        button1 .setOnClickListener {
             println("Going deeper.")
             val intent = Intent(ACTION_VIEW, Uri.parse("deep://deep/content"))  // opens Activity1
             startActivity(intent)
         }
 
-        helloButton.setOnClickListener {
+        button2.setOnClickListener {
             println("Hello, you.")
             val intent = Intent(ACTION_VIEW, Uri.parse("deep://deep/custom/damian"))  // opens Activity2
             startActivity(intent)
