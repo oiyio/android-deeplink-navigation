@@ -1,6 +1,5 @@
 package com.brainasaservice.deeplinker.dagger
 
-import com.brainasaservice.deeplinker.deepcontent.Activity1Module
 import com.brainasaservice.deeplinker.deepcustom.Activity2Module
 import com.brainasaservice.deeplinker.main.MainActivity
 import com.brainasaservice.deeplinker.main.MainModule
@@ -14,7 +13,6 @@ import javax.inject.Singleton
 @Component(
     modules = [
         AppModule::class,
-        Activity1Module::class,
         MainModule::class,
         Activity2Module::class
     ]

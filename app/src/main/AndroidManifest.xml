@@ -21,10 +21,6 @@
         </activity>
 
         <activity
-            android:name=".deepcontent.Activity1"
-            android:label="Activity 1"
-            android:parentActivityName=".main.MainActivity" />
-        <activity
             android:name=".deepcustom.Activity2"
             android:label="Activity 2"
             android:parentActivityName=".main.MainActivity" />
