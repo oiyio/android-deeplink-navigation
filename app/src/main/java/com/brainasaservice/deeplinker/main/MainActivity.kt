@@ -16,13 +16,13 @@ class MainActivity : AppCompatActivity() {
 
         deepButton.setOnClickListener {
             println("Going deeper.")
-            val intent = Intent(ACTION_VIEW, Uri.parse("deep://deep/content"))
+            val intent = Intent(ACTION_VIEW, Uri.parse("deep://deep/content"))  // opens DeepContentActivity
             startActivity(intent)
         }
 
         helloButton.setOnClickListener {
             println("Hello, you.")
-            val intent = Intent(ACTION_VIEW, Uri.parse("deep://deep/custom/damian"))
+            val intent = Intent(ACTION_VIEW, Uri.parse("deep://deep/custom/damian"))  // opens DeepCustomActivity
             startActivity(intent)
         }
     }
