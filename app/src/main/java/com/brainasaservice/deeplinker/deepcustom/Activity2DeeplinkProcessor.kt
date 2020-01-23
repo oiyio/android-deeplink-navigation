@@ -21,7 +21,7 @@ class Activity2DeeplinkProcessor @Inject constructor(
 
         context.startActivity(Intent(context, Activity2::class.java).apply {
             this.flags = FLAG_ACTIVITY_NEW_TASK
-            putExtra(Activity2DeeplinkProcessor.EXTRA_KEY, user)
+            putExtra(EXTRA_KEY, user)
         })
     }
 
