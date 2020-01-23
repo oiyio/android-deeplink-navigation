@@ -7,6 +7,7 @@ import com.brainasaservice.deeplinker.DeeplinkHandler
 import com.brainasaservice.deeplinker.deepcustom.DeeplinkProcessor
 
 class MyDeeplinkActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         intent?.let { handleIntent(it) }
@@ -24,5 +25,5 @@ class MyDeeplinkActivity : AppCompatActivity() {
         finish()
     }
 
-    fun getDeeplinkHandler(): DeeplinkHandler = DeeplinkHandler( DeeplinkProcessor(this))
+    fun getDeeplinkHandler(): DeeplinkHandler = DeeplinkHandler(DeeplinkProcessor(this))
 }
