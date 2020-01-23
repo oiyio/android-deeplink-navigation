@@ -12,7 +12,7 @@ class Activity2 : AppCompatActivity() {
         println("onCreate(${javaClass.simpleName})")
         setContentView(R.layout.activity_deep_custom)
 
-        intent.extras?.getParcelable<User>(Activity2DeeplinkProcessor.EXTRA_KEY)
+        intent.extras?.getParcelable<User>(DeeplinkProcessor.EXTRA_KEY)
             ?.let { user ->
                 textTitle.text = "Hello, ${user.name}!"
             }

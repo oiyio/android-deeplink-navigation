@@ -7,7 +7,7 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 @Singleton
-class Activity2DeeplinkProcessor @Inject constructor(
+class DeeplinkProcessor @Inject constructor(
     private val context: Context
 ) {
 

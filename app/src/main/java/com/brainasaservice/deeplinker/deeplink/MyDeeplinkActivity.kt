@@ -3,8 +3,8 @@ package com.brainasaservice.deeplinker.deeplink
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import com.brainasaservice.deeplinker.DefaultDeeplinkHandler
-import com.brainasaservice.deeplinker.deepcustom.Activity2DeeplinkProcessor
+import com.brainasaservice.deeplinker.DeeplinkHandler
+import com.brainasaservice.deeplinker.deepcustom.DeeplinkProcessor
 
 class MyDeeplinkActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,5 +24,5 @@ class MyDeeplinkActivity : AppCompatActivity() {
         finish()
     }
 
-    fun getDeeplinkHandler(): DefaultDeeplinkHandler = DefaultDeeplinkHandler(Activity2DeeplinkProcessor(this))
+    fun getDeeplinkHandler(): DeeplinkHandler = DeeplinkHandler( DeeplinkProcessor(this))
 }
