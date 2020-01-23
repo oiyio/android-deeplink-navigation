@@ -11,28 +11,11 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        println("onCreate(${javaClass.simpleName})")
         setContentView(R.layout.activity_main)
 
         button2.setOnClickListener {
-            println("Hello, you.")
             val intent = Intent(ACTION_VIEW, Uri.parse("deep://deep/custom/damian"))  // opens Activity2
             startActivity(intent)
         }
-    }
-
-    override fun onStart() {
-        super.onStart()
-        println("onStart(${javaClass.simpleName})")
-    }
-
-    override fun onStop() {
-        super.onStop()
-        println("onStop(${javaClass.simpleName})")
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        println("onDestroy(${javaClass.simpleName})")
     }
 }

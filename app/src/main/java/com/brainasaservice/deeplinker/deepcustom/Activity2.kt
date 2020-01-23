@@ -24,7 +24,6 @@ class Activity2 : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        println("onCreate(${javaClass.simpleName})")
         setContentView(R.layout.activity_deep_custom)
 
         intent.extras?.getParcelable<User>(EXTRA_KEY)
@@ -39,20 +38,5 @@ class Activity2 : AppCompatActivity() {
             }
             super.onBackPressed()
         }
-    }
-
-    override fun onStart() {
-        super.onStart()
-        println("onStart(${javaClass.simpleName})")
-    }
-
-    override fun onStop() {
-        super.onStop()
-        println("onStop(${javaClass.simpleName})")
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        println("onDestroy(${javaClass.simpleName})")
     }
 }
