@@ -7,11 +7,8 @@ import com.brainasaservice.deeplinker.deepcustom.DeeplinkProcessor
 
 class MyDeeplinkActivity : AppCompatActivity() {
 
-    lateinit var processor : DeeplinkProcessor
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        processor = DeeplinkProcessor(this)
         intent?.let { handleIntent(it) }
     }
 
@@ -21,11 +18,12 @@ class MyDeeplinkActivity : AppCompatActivity() {
     }
 
     private fun handleIntent(intent: Intent) {
-        val deepUrl = intent.data?.toString()
+        val deeplink = intent.data?.toString()
 
-        if(deepUrl!=null){
-            if(processor.matches(deepUrl)){
-                processor.execute(deepUrl)
+        if(deeplink!=null){
+            val processor = DeeplinkProcessor(context = this)
+            if(processor.matches(deeplink)){
+                processor.execute(deeplink)
             }
         }
         finish()
