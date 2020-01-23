@@ -1,15 +1,15 @@
 package com.brainasaservice.deeplinker.deepcustom
 
-import com.brainasaservice.deeplinkprocessor.DeeplinkProcessor
+import android.content.Context
 import dagger.Binds
 import dagger.Module
+import dagger.Provides
 import dagger.multibindings.IntoSet
 
 @Module
-interface Activity2Module {
-    @Binds
-    @IntoSet
-    fun bindsDeepContentDeeplinkProcessorIntoSet(
-        processor: Activity2DeeplinkProcessor
-    ): DeeplinkProcessor
+class Activity2Module {
+    @Provides
+    fun providesProcessor(context: Context) : Activity2DeeplinkProcessor{
+        return Activity2DeeplinkProcessor(context)
+    }
 }

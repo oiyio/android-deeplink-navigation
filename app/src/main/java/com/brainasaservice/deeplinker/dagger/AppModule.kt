@@ -2,9 +2,8 @@ package com.brainasaservice.deeplinker.dagger
 
 import android.content.Context
 import com.brainasaservice.deeplinker.ui.DeeplinkApp
-import com.brainasaservice.deeplinkprocessor.DeeplinkHandler
-import com.brainasaservice.deeplinkprocessor.DeeplinkProcessor
-import com.brainasaservice.deeplinkprocessor.DefaultDeeplinkHandler
+import com.brainasaservice.deeplinker.DefaultDeeplinkHandler
+import com.brainasaservice.deeplinker.deepcustom.Activity2DeeplinkProcessor
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
@@ -19,7 +18,5 @@ class AppModule(
 
     @Provides
     @Singleton
-    fun providesDefaultDeeplinkHandler(
-        processors: Set<@JvmSuppressWildcards DeeplinkProcessor>
-    ): DeeplinkHandler = DefaultDeeplinkHandler(processors)
+    fun providesDefaultDeeplinkHandler(processor: Activity2DeeplinkProcessor): DefaultDeeplinkHandler = DefaultDeeplinkHandler(processor)
 }

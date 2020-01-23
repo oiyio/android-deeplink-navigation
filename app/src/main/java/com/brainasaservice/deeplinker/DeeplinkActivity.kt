@@ -1,4 +1,4 @@
-package com.brainasaservice.deeplinkprocessor
+package com.brainasaservice.deeplinker
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity
 
 abstract class DeeplinkActivity : AppCompatActivity() {
 
-    abstract fun getDeeplinkHandler(): DeeplinkHandler
+    abstract fun getDeeplinkHandler(): DefaultDeeplinkHandler
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

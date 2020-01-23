@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.support.v4.app.NavUtils
 import android.support.v7.app.AppCompatActivity
 import com.brainasaservice.deeplinker.R
-import com.brainasaservice.deeplinkprocessor.DeeplinkProcessor
 import kotlinx.android.synthetic.main.activity_deep_custom.*
 
 class Activity2 : AppCompatActivity() {
@@ -13,7 +12,7 @@ class Activity2 : AppCompatActivity() {
         println("onCreate(${javaClass.simpleName})")
         setContentView(R.layout.activity_deep_custom)
 
-        intent.extras?.getParcelable<User>(DeeplinkProcessor.EXTRA_KEY)
+        intent.extras?.getParcelable<User>(Activity2DeeplinkProcessor.EXTRA_KEY)
             ?.let { user ->
                 textTitle.text = "Hello, ${user.name}!"
             }

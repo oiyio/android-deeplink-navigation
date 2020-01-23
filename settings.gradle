@@ -1,1 +1,1 @@
-include ':app', ':deeplinkprocessor'
+include ':app'
